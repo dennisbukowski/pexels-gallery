@@ -1,0 +1,19 @@
+<section class="padding-y-lg">
+  <div
+  class="container max-width-adaptive-lg"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollDisabled]="isPauseScroll"
+  (scrolled)="onScroll()">
+    <app-gallery
+      *ngIf="photoColumns$ | async as columns"
+      [pexelColumns]="columns">
+    </app-gallery>
+  </div>
+</section>
+
+<lib-back-to-top></lib-back-to-top>
+
+<ng-template #imageLoadingTemplate>
+  <div class="gallery__loading"></div>
+</ng-template>

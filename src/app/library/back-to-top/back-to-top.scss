@@ -1,0 +1,39 @@
+@import "Mixins";
+
+:host {
+  --btt-icon-size: 2em;
+}
+
+.back-to-top {
+  position: fixed;
+  right: var(--space-md);
+  bottom: calc(var(--space-md));
+  padding: var(--space-xs);
+  z-index: var(--zindex-fixed-element);
+  border-radius: var(--radius-md);
+  background-color: var(--color-contrast-low);
+  transition: 0.3s;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: lightness(var(--color-contrast-low), 0.95);
+    }
+  }
+
+  .icon {
+    display: block;
+    color: var(--color-contrast-higher);
+    width: var(--btt-icon-size);
+    height: var(--btt-icon-size);
+  }
+}
+
+.back-to-top {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.back-to-top--is-visible {
+  visibility: visible;
+  opacity: 1;
+}

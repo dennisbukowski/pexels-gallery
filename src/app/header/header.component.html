@@ -1,0 +1,173 @@
+<header class="f-header" #fHeader>
+  <div class="f-header__mobile-content container max-width-lg">
+    <a [routerLink]="['/']" class="f-header__logo">
+      <svg viewBox="0 0 30 30">
+        <circle fill="var(--color-primary)" cx="15" cy="15" r="15"/>
+      </svg>
+    </a>
+
+    <button
+      class="reset anim-menu-btn js-anim-menu-btn js-tab-focus f-header__nav-control"
+      aria-label="Toggle menu"
+      (click)="handleClick($event, fHeader, fHeaderNav)">
+      <i class="anim-menu-btn__icon anim-menu-btn__icon--close" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="f-header__nav" role="navigation" #fHeaderNav>
+    <div class="f-header__nav-grid container max-width-lg">
+      <div class="f-header__nav-logo-wrapper margin-right-lg@md">
+        <a [routerLink]="['/']" class="f-header__logo">
+          <svg viewBox="0 0 266.3 30">
+            <circle fill="var(--color-primary)" cx="15" cy="15" r="15"/>
+            <path fill="var(--color-contrast-higher)" d="M42,4.6h4.1c0.2,0,0.4,0.1,0.5,0.3l7.1,16.9c0.1,0.3-0.1,0.7-0.5,0.7h-4.2c-0.2,0-0.4-0.1-0.5-0.3l-1.2-2.9h-6.8l-1.1,2.9
+              c-0.1,0.2-0.3,0.3-0.5,0.3h-4.1c-0.4,0-0.6-0.4-0.5-0.7l7.1-16.9C41.7,4.7,41.8,4.6,42,4.6z M46,15.5l-2-5l-2,5H46z"/>
+            <path fill="var(--color-contrast-higher)" d="M56,8.8h3.8c0.3,0,0.5,0.2,0.5,0.5v1.3c0.9-1.1,2.1-2.1,4.2-2.1c3.3,0,6.1,2.7,6.1,7.1v0.1c0,4.5-2.8,7.2-6.1,7.2
+              c-2.1,0-3.3-0.9-4.2-2v5.2c0,0.3-0.2,0.5-0.5,0.5H56c-0.3,0-0.5-0.2-0.5-0.5V9.3C55.5,9,55.7,8.8,56,8.8z M65.8,15.7L65.8,15.7
+              c0-1.9-1.2-3.1-2.8-3.1c-1.5,0-2.8,1.3-2.8,3.1v0.1c0,1.8,1.2,3.1,2.8,3.1C64.5,18.8,65.8,17.5,65.8,15.7z"/>
+            <path fill="var(--color-contrast-higher)" d="M73.1,8.8h3.8c0.3,0,0.5,0.2,0.5,0.5v1.3c0.9-1.1,2.1-2.1,4.2-2.1c3.3,0,6.1,2.7,6.1,7.1v0.1c0,4.5-2.8,7.2-6.1,7.2
+              c-2.1,0-3.3-0.9-4.2-2v5.2c0,0.3-0.2,0.5-0.5,0.5h-3.8c-0.3,0-0.5-0.2-0.5-0.5V9.3C72.6,9,72.8,8.8,73.1,8.8z M82.9,15.7L82.9,15.7
+              c0-1.9-1.2-3.1-2.8-3.1c-1.5,0-2.8,1.3-2.8,3.1v0.1c0,1.8,1.2,3.1,2.8,3.1C81.7,18.8,82.9,17.5,82.9,15.7z"/>
+            <path fill="var(--color-contrast-higher)" d="M90.2,8.8h3.8c0.3,0,0.5,0.2,0.5,0.5v2.3c0.7-1.7,1.9-2.9,3.8-3c0.3,0,0.5,0.2,0.5,0.5v4.6h-0.4c-2.5,0-3.9,1.4-3.9,4.6V22
+              c0,0.3-0.2,0.5-0.5,0.5h-3.8c-0.3,0-0.5-0.2-0.5-0.5V9.3C89.7,9,90,8.8,90.2,8.8z"/>
+            <path fill="var(--color-contrast-higher)" d="M99.8,15.7L99.8,15.7c0-4.1,2.9-7.2,6.9-7.2c4.7,0,6.9,3.5,6.9,7.5c0,0.3,0,0.7,0,1h-9.2c0.4,1.5,1.5,2.3,3,2.3
+              c1,0,1.9-0.3,2.7-1.1c0.2-0.2,0.5-0.2,0.7,0l1.9,1.6c0.2,0.2,0.3,0.5,0.1,0.7c-1.3,1.5-3.1,2.4-5.6,2.4
+              C102.8,22.8,99.8,20,99.8,15.7z M109.1,14.5c-0.2-1.5-1.1-2.5-2.4-2.5c-1.3,0-2.1,1-2.4,2.5H109.1z"/>
+            <path fill="var(--color-contrast-higher)" d="M116.2,8.8h3.8c0.3,0,0.5,0.2,0.5,0.5v1.4c0.9-1.1,2.2-2.2,4.1-2.2c2.9,0,4.7,1.9,4.7,5V22c0,0.3-0.2,0.5-0.5,0.5H125
+              c-0.3,0-0.5-0.2-0.5-0.5v-6.9c0-1.5-0.8-2.3-1.9-2.3c-1.2,0-2,0.8-2,2.3V22c0,0.3-0.2,0.5-0.5,0.5h-3.8c-0.3,0-0.5-0.2-0.5-0.5V9.3
+              C115.7,9,115.9,8.8,116.2,8.8z"/>
+            <path fill="var(--color-contrast-higher)" d="M132.6,18.2v-5.6h-1.1c-0.3,0-0.5-0.2-0.5-0.5V9.3c0-0.3,0.2-0.5,0.5-0.5h1.1v-3c0-0.3,0.2-0.5,0.5-0.5h3.8
+              c0.3,0,0.5,0.2,0.5,0.5v3h2.7c0.3,0,0.5,0.2,0.5,0.5v2.9c0,0.3-0.2,0.5-0.5,0.5h-2.7v4.6c0,1,0.4,1.4,1.3,1.4
+              c0.4,0,0.8-0.1,1.2-0.2c0.3-0.1,0.7,0.1,0.7,0.5v2.7c0,0.2-0.1,0.4-0.3,0.5c-0.8,0.4-1.9,0.6-3.1,0.6
+              C134.3,22.8,132.6,21.5,132.6,18.2z"/>
+            <path fill="var(--color-contrast-higher)" d="M143.2,4h4c0.3,0,0.5,0.2,0.5,0.5V7c0,0.3-0.2,0.5-0.5,0.5h-4c-0.3,0-0.5-0.2-0.5-0.5V4.5C142.7,4.2,142.9,4,143.2,4z
+              M143.3,8.8h3.8c0.3,0,0.5,0.2,0.5,0.5V22c0,0.3-0.2,0.5-0.5,0.5h-3.8c-0.3,0-0.5-0.2-0.5-0.5V9.3C142.8,9,143,8.8,143.3,8.8z"/>
+            <path fill="var(--color-contrast-higher)" d="M149.8,15.7L149.8,15.7c0-3.9,3-7.2,7.4-7.2c2.6,0,4.4,1,5.6,2.7c0.2,0.2,0.1,0.5-0.1,0.7l-2.5,1.9
+              c-0.2,0.2-0.5,0.1-0.7-0.1c-0.6-0.7-1.3-1.1-2.3-1.1c-1.5,0-2.7,1.4-2.7,3v0.1c0,1.8,1.1,3.1,2.7,3.1c1,0,1.7-0.4,2.4-1.1
+              c0.2-0.2,0.5-0.2,0.7,0l2.4,1.8c0.2,0.2,0.3,0.5,0.1,0.7c-1.3,1.6-3,2.7-5.8,2.7C152.8,22.8,149.8,19.6,149.8,15.7z"/>
+            <path fill="var(--color-contrast-higher)" d="M163.8,15.7L163.8,15.7c0-4.1,2.9-7.2,6.9-7.2c4.7,0,6.9,3.5,6.9,7.5c0,0.3,0,0.7,0,1h-9.2c0.4,1.5,1.5,2.3,3,2.3
+              c1,0,1.9-0.3,2.7-1.1c0.2-0.2,0.5-0.2,0.7,0l1.9,1.6c0.2,0.2,0.3,0.5,0.1,0.7c-1.3,1.5-3.1,2.4-5.6,2.4
+              C166.8,22.8,163.8,20,163.8,15.7z M173.1,14.5c-0.2-1.5-1.1-2.5-2.4-2.5c-1.3,0-2.1,1-2.4,2.5H173.1z"/>
+            <path fill="var(--color-contrast-higher)" d="M187,5.3c0-0.3,0.2-0.5,0.5-0.5h7.1c4.5,0,7.4,2.3,7.4,6.2V11c0,4.2-3.2,6.4-7.6,6.4h-2.4V22c0,0.3-0.2,0.5-0.5,0.5h-3.9
+              c-0.3,0-0.5-0.2-0.5-0.5V5.3z M194.3,13.6c1.8,0,2.8-0.9,2.8-2.3v-0.1c0-1.5-1.1-2.3-2.8-2.3h-2.3v4.7H194.3z"/>
+            <path fill="var(--color-contrast-higher)" d="M203.1,15.7L203.1,15.7c0-4.1,2.9-7.2,6.9-7.2c4.7,0,6.9,3.5,6.9,7.5c0,0.3,0,0.7,0,1h-9.2c0.4,1.5,1.5,2.3,3,2.3
+              c1,0,1.9-0.3,2.7-1.1c0.2-0.2,0.5-0.2,0.7,0l1.9,1.6c0.2,0.2,0.3,0.5,0.1,0.7c-1.3,1.5-3.1,2.4-5.6,2.4
+              C206.2,22.8,203.1,20,203.1,15.7z M212.4,14.5c-0.2-1.5-1.1-2.5-2.4-2.5c-1.3,0-2.1,1-2.4,2.5H212.4z"/>
+            <path fill="var(--color-contrast-higher)" d="M221.8,15.6l-4-6c-0.2-0.3,0-0.8,0.4-0.8h4c0.2,0,0.3,0.1,0.4,0.2l1.9,3.1l1.9-3.1c0.1-0.2,0.3-0.2,0.4-0.2h3.9
+              c0.4,0,0.6,0.4,0.4,0.8l-4,6l4.1,6.2c0.2,0.3,0,0.8-0.4,0.8h-4c-0.2,0-0.3-0.1-0.4-0.2l-2-3.3l-2,3.3c-0.1,0.1-0.3,0.2-0.4,0.2
+              h-3.9c-0.4,0-0.6-0.4-0.4-0.8L221.8,15.6z"/>
+            <path fill="var(--color-contrast-higher)" d="M231.7,15.7L231.7,15.7c0-4.1,2.9-7.2,6.9-7.2c4.7,0,6.9,3.5,6.9,7.5c0,0.3,0,0.7,0,1h-9.2c0.4,1.5,1.5,2.3,3,2.3
+              c1,0,1.9-0.3,2.7-1.1c0.2-0.2,0.5-0.2,0.7,0l1.9,1.6c0.2,0.2,0.3,0.5,0.1,0.7c-1.3,1.5-3.1,2.4-5.6,2.4
+              C234.8,22.8,231.7,20,231.7,15.7z M241.1,14.5c-0.2-1.5-1.1-2.5-2.4-2.5c-1.3,0-2.1,1-2.4,2.5H241.1z"/>
+            <path fill="var(--color-contrast-higher)" d="M248.2,4h3.8c0.3,0,0.5,0.2,0.5,0.5V22c0,0.3-0.2,0.5-0.5,0.5h-3.8c-0.3,0-0.5-0.2-0.5-0.5V4.5C247.7,4.2,248,4,248.2,4z"
+              />
+            <path fill="var(--color-contrast-higher)" d="M254.5,20.4l1.3-2.1c0.1-0.2,0.4-0.3,0.7-0.2c1.5,0.9,3,1.3,4.3,1.3c0.8,0,1.2-0.3,1.2-0.7v-0.1c0-0.5-0.8-0.8-2.2-1.2
+              c-2.7-0.7-4.9-1.6-4.9-4.4V13c0-2.9,2.3-4.5,5.5-4.5c1.8,0,3.7,0.5,5.2,1.3c0.2,0.1,0.3,0.4,0.2,0.7l-1.2,2.2
+              c-0.1,0.2-0.4,0.3-0.7,0.2c-1.3-0.6-2.6-1-3.6-1c-0.7,0-1.1,0.3-1.1,0.7v0.1c0,0.5,0.8,0.8,2.2,1.2c2.7,0.8,4.9,1.7,4.9,4.4v0.1
+              c0,3-2.3,4.6-5.6,4.6c-2.1,0-4.3-0.6-6.1-1.8C254.4,20.9,254.3,20.6,254.5,20.4z"/>
+          </svg>
+        </a>
+      </div>
+
+      <ul class="f-header__list margin-left-auto@md">
+        <Li class="f-header__item">
+          <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+
+            <div class="input--icon-right" [ngClass]="isDefaultInputActive ? 'search-input' : 'color-input'">
+
+              <div class="input-group">
+                <div class="input-group__tag">
+                  <div class="custom-select">
+                    <select formControlName="searchType">
+                      <option ngValue="default">Default</option>
+                      <option ngValue="color">Color</option>
+                    </select>
+                  </div>
+                </div>
+
+                <ng-container *ngIf="isDefaultInputActive; else colorInputTemplate">
+                  <input class="search-input__input form-control" type="search" name="search-input-deafult" placeholder="Search..." aria-label="Search" formControlName="searchStringDefault">
+                </ng-container>
+                <ng-template #colorInputTemplate>
+                  <div class="input-merger">
+                    <input class="input-merger__input-left search-input__input reset" type="search" name="search-input-deafult" placeholder="Search..." aria-label="Search" formControlName="searchStringDefault">
+                    <input class="input-merger__input-right color-input__input reset" type="color" name="search-input-color" aria-label="Color" formControlName="searchStringHexColor">
+                  </div>
+                </ng-template>
+
+                <button class="search-input__btn">
+                  <svg class="icon" viewBox="0 0 24 24">
+                    <g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" stroke="currentColor" fill="none" stroke-miterlimit="10"><line x1="22" y1="22" x2="15.656" y2="15.656"></line><circle cx="10" cy="10" r="8"></circle></g>
+                  </svg>
+                </button>
+
+              </div>
+
+            </div>
+
+          </form>
+        </Li>
+        <li class="f-header__item">
+          <ng-container *ngIf="userPrefs | async as userPrefs">
+          <button class="btn btn--primary" (click)="handleThemeChange(userPrefs.theme)">
+              <ng-container *ngIf="userPrefs.theme === 'light-theme'; else lightThemeTemplate">
+                <svg class="icon icon--sm" viewBox="0 0 32 32">
+                  <path d="M31.1,18.4c-0.4-0.4-0.9-0.6-1.5-0.4c-1,0.2-2.1,0.5-3.4,0.5c-7,0-12.7-5.7-12.7-12.7c0-1,0.2-2.1,0.5-3.4
+                  c0.1-0.6,0-1.2-0.4-1.5c-0.3-0.4-0.9-0.6-1.5-0.4C5.3,2.4,0.5,8.6,0.5,15.7c0,8.7,7.1,15.8,15.8,15.8c7.1,0,13.3-4.8,15.2-11.5
+                  C31.6,19.5,31.5,18.9,31.1,18.4z M26.2,21.5c0.4,0,0.9,0,1.4-0.1c-2.1,4.3-6.5,7.1-11.4,7.1c-7,0-12.7-5.7-12.7-12.8
+                  c0-4.9,2.7-9.2,7-11.4c0,0.5,0,1,0,1.5C10.5,14.5,17.5,21.5,26.2,21.5z"/>
+                </svg>
+              </ng-container>
+              <ng-template #lightThemeTemplate>
+                <svg class="icon icon--sm" viewBox="0 0 32 32">
+                  <g>
+                    <path d="M7.5,22.6c-0.5,0-0.9,0.2-1.3,0.5l-1.3,1.3c-0.4,0.4-0.5,0.8-0.5,1.3c0,0.5,0.2,0.9,0.5,1.3c0.4,0.4,0.8,0.5,1.3,0.5
+                      c0.5,0,0.9-0.2,1.3-0.5l1.3-1.3c0.7-0.7,0.7-1.9,0-2.6C8.5,22.8,8,22.6,7.5,22.6z"/>
+                    <path d="M6.2,8.8c0.3,0.3,0.8,0.5,1.3,0.5c0.5,0,1-0.2,1.3-0.5c0.7-0.7,0.7-1.9,0-2.6L7.5,4.9C7.2,4.6,6.7,4.4,6.2,4.4
+                      c-0.5,0-0.9,0.2-1.3,0.5C4.6,5.3,4.4,5.7,4.4,6.2c0,0.5,0.2,0.9,0.5,1.3L6.2,8.8z"/>
+                    <path d="M16,5.9c1.1,0,1.8-0.8,1.8-1.8V2.2c0-1.1-0.8-1.8-1.8-1.8c-1.1,0-1.8,0.8-1.8,1.8V4C14.2,5.1,14.9,5.9,16,5.9z"/>
+                    <path d="M24.5,9.4c0.5,0,0.9-0.2,1.3-0.5l1.3-1.3c0.4-0.4,0.5-0.8,0.5-1.3c0-0.5-0.2-0.9-0.5-1.3c-0.4-0.4-0.8-0.5-1.3-0.5
+                      c-0.5,0-0.9,0.2-1.3,0.5l-1.3,1.3c-0.4,0.4-0.5,0.8-0.5,1.3c0,0.5,0.2,0.9,0.5,1.3C23.6,9.2,24,9.4,24.5,9.4z"/>
+                    <path d="M5.9,16c0-1.1-0.8-1.8-1.8-1.8H2.2c-1.1,0-1.8,0.8-1.8,1.8c0,1.1,0.8,1.8,1.8,1.8H4C5.1,17.8,5.9,17.1,5.9,16z"/>
+                    <path d="M29.8,14.2H28c-1.1,0-1.8,0.8-1.8,1.8c0,1.1,0.8,1.8,1.8,1.8h1.8c1.1,0,1.8-0.8,1.8-1.8C31.7,14.9,30.9,14.2,29.8,14.2z"/>
+                    <path d="M25.8,23.2c-0.4-0.4-0.8-0.5-1.3-0.5c-0.5,0-0.9,0.2-1.3,0.5c-0.7,0.7-0.7,1.9,0,2.6l1.3,1.3c0.3,0.3,0.8,0.5,1.3,0.5
+                      c0.5,0,1-0.2,1.3-0.5c0.4-0.4,0.5-0.8,0.5-1.3c0-0.5-0.2-0.9-0.5-1.3L25.8,23.2z"/>
+                    <path d="M16,6.8c-5.1,0-9.2,4.1-9.2,9.2c0,5.1,4.1,9.2,9.2,9.2c5.1,0,9.2-4.1,9.2-9.2C25.2,10.9,21.1,6.8,16,6.8z M16,21.5
+                      c-3.1,0-5.5-2.4-5.5-5.5s2.4-5.5,5.5-5.5s5.5,2.4,5.5,5.5S19.1,21.5,16,21.5z"/>
+                    <path d="M16,26.1c-1.1,0-1.8,0.8-1.8,1.8v1.8c0,1.1,0.8,1.8,1.8,1.8c1.1,0,1.8-0.8,1.8-1.8V28C17.8,26.9,17.1,26.1,16,26.1z"/>
+                  </g>
+                </svg>
+              </ng-template>
+              <span *ngIf="nextTheme" class="margin-left-xxs">
+                {{nextTheme | replace : '-' : ' ' | titlecase}}
+              </span>
+          </button>
+        </ng-container>
+        </li>
+        <li class="f-header__item">
+          <button class="btn btn--subtle" (click)="handleScrollStatus()">
+            <ng-container *ngIf="isScrollPaused; else scrollStatusTemplate">
+              <svg class="icon icon--sm" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+              <path d="M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M16,30C8.3,30,2,23.7,2,16S8.3,2,16,2s14,6.3,14,14
+                S23.7,30,16,30z"/>
+              <path d="M23.6,15.2l-10-7c-0.3-0.2-0.7-0.2-1-0.1C12.2,8.3,12,8.6,12,9v14c0,0.4,0.2,0.7,0.5,0.9C12.7,24,12.8,24,13,24
+                s0.4-0.1,0.6-0.2l10-7c0.3-0.2,0.4-0.5,0.4-0.8S23.8,15.4,23.6,15.2z M14,21.1V10.9l7.3,5.1L14,21.1z"/>
+              </svg>
+              <span class="margin-left-xxs">Start</span>
+            </ng-container>
+            <ng-template #scrollStatusTemplate>
+              <svg class="icon icon--sm" viewBox="0 0 32 32">
+                <path d="M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M16,30C8.3,30,2,23.7,2,16S8.3,2,16,2s14,6.3,14,14
+                  S23.7,30,16,30z M14,9h-4c-0.6,0-1,0.4-1,1v12c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1V10C15,9.4,14.6,9,14,9z M13,21h-2V11h2V21z M22,9
+                  h-4c-0.6,0-1,0.4-1,1v12c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1V10C23,9.4,22.6,9,22,9z M21,21h-2V11h2V21z"/>
+              </svg>
+              <span class="margin-left-xxs">Pause</span>
+            </ng-template>
+            <span class="margin-left-xxs">Infinite Scroll</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

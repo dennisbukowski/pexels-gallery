@@ -1,0 +1,12 @@
+// Globals
+:root {
+  --f-header-height: 50px;
+
+  @include breakpoint(md) {
+    --f-header-height: 70px;
+  }
+}
+
+body {
+  background-color: var(--background-primary);
+}

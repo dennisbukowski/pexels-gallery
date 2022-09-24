@@ -1,0 +1,35 @@
+@import "mixins";
+
+:host {
+  display: block;
+}
+
+.main-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.main-footer__logo {
+  flex-shrink: 0;
+  width: 200px;
+  display: block;
+
+  svg,
+  img {
+    display: block;
+    width: inherit;
+    height: inherit;
+  }
+}
+
+.main-footer__item {
+  font-size: var(--text-sm);
+  margin-top: var(--space-xs);
+}
+
+.main-footer__colophon {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px solid alpha(var(--color-contrast-low), var(--border-o, 1));
+}

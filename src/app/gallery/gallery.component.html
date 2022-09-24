@@ -1,0 +1,71 @@
+<div class="gallery" *ngIf="pexelColumns">
+  <div class="gallery__column" *ngFor="let pexelColumn of pexelColumns; let i = index">
+    <div
+      class="gallery__item"
+      *ngFor="let pexelPhoto of pexelColumn"
+      [ngStyle]="{ 'padding-top': pexelPhoto.aspectRatioPadding + '%'}">
+
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+
+      <!-- Link Markup -->
+      <figure class="gallery__figure">
+        <a class="gallery__link"
+          appDebounceClick
+          [debounceTime]="50"
+          (debounceClick)="open(modalTemplate)">
+          <img class="gallery__image"
+            srcset="{{pexelPhoto.imageMap?.toString()}}"
+            sizes="{{pexelPhoto.imageSize?.toString()}}"
+            [src]="pexelPhoto.src.original">
+        </a>
+        <div class="gallery__link-icon" aria-hidden="true">
+          <svg class="icon" viewBox="0 0 24 24">
+            <title>Submit</title>
+            <g stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" stroke="currentColor" fill="none" stroke-miterlimit="10"><line x1="22" y1="22" x2="15.656" y2="15.656"></line><circle cx="10" cy="10" r="8"></circle></g>
+          </svg>
+        </div>
+      </figure>
+
+      <!-- Modal Template -->
+      <ng-template #modalTemplate>
+        <header class="modal__header bg-contrast-lower padding-y-sm padding-x-md flex items-center justify-between shadow-md">
+          <div class="flex items-center">
+            <svg class="icon icon--sm" viewBox="0 0 32 32">
+              <g>
+                <path d="M22,20.3H10c-5.3,0-9.6,4.3-9.6,9.7c0,1,0.7,1.7,1.6,1.7h28c1,0,1.7-0.7,1.7-1.7C31.7,24.7,27.3,20.3,22,20.3z M10,23.7h12
+                c2.9,0,5.4,2,6.1,4.7H3.9C4.6,25.6,7.1,23.7,10,23.7z"/>
+                <path d="M16,19.7c4.8,0,8.7-3.9,8.7-8.7V9c0-4.8-3.9-8.6-8.7-8.6S7.4,4.2,7.4,9v2C7.4,15.8,11.2,19.7,16,19.7z M16,3.6
+                c3,0,5.3,2.4,5.3,5.4v2c0,3-2.4,5.4-5.3,5.4S10.6,14,10.6,11V9C10.6,6,13,3.6,16,3.6z"/>
+              </g>
+            </svg>
+            <h4 class="margin-left-xs">{{ pexelPhoto.photographer }}</h4>
+          </div>
+          <div class="flex justify-end gap-xs">
+            <button class="btn btn--primary"
+              appDebounceClick
+              (debounceClick)="handleImageDownload(pexelPhoto.src.original, pexelPhoto.url)">
+              <svg class="icon icon--sm" viewBox="0 0 32 32">
+              <path d="M31.9,21.6C31.9,21.6,31.9,21.5,31.9,21.6l-6-11.1C25.7,10.2,25.4,10,25,10h-1c-0.6,0-1,0.4-1,1s0.4,1,1,1h0.4l4.9,9H2.7
+                l4.9-9H8c0.6,0,1-0.4,1-1s-0.4-1-1-1H7c-0.4,0-0.7,0.2-0.9,0.5l-6,11c0,0,0,0,0,0.1c0,0,0,0,0,0.1C0,21.8,0,21.9,0,22v8
+                c0,0.6,0.4,1,1,1h30c0.6,0,1-0.4,1-1v-8C32,21.9,32,21.8,31.9,21.6C31.9,21.6,31.9,21.6,31.9,21.6z M2,29v-6h28v6H2z M16,1
+                c-0.6,0-1,0.4-1,1v10.6l-2.3-2.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l4,4c0.1,0.1,0.2,0.2,0.3,0.2C15.7,16,15.9,16,16,16
+                c0.1,0,0.3,0,0.4-0.1s0.2-0.1,0.3-0.2l4-4c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0L17,12.6V2C17,1.4,16.6,1,16,1z M26,25h-4
+                c-0.6,0-1,0.4-1,1s0.4,1,1,1h4c0.6,0,1-0.4,1-1S26.6,25,26,25z"/>
+              </svg>
+              <span class="margin-left-xxs">Download</span>
+            </button>
+          </div>
+        </header>
+        <div class="padding-md">
+          <img class="gallery__image"
+            srcset="{{pexelPhoto.imageMap?.toString()}}"
+            sizes="{{pexelPhoto.imageSize?.toString()}}"
+            [src]="pexelPhoto.src.original">
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

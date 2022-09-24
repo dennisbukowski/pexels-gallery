@@ -1,0 +1,57 @@
+[data-theme] {
+  // black + white
+  @include defineColorHSL(--color-black, 0, 0%, 0%);
+  @include defineColorHSL(--color-white, 0, 0%, 100%);
+
+  @include defineColorHSL(--color-success, 94, 48%, 56%);
+  @include defineColorHSL(--color-error, 349, 75%, 51%);
+  @include defineColorHSL(--color-warning, 46, 100%, 61%);
+}
+
+[data-theme="light-theme"] {
+  // primary
+  @include defineColorHSL(--color-primary-darker, 33, 100%, 27%);
+  @include defineColorHSL(--color-primary-dark, 33, 100%, 45%);
+  @include defineColorHSL(--color-primary, 33, 100%, 47%);
+  @include defineColorHSL(--color-primary-light, 33, 100%, 57%);
+  @include defineColorHSL(--color-primary-lighter, 33, 100%, 67%);
+
+  // color contrasts
+  @include defineColorHSL(--color-bg, 0, 0%, 100%);
+  @include defineColorHSL(--color-contrast-lowest, 0, 0%, 96%);
+  @include defineColorHSL(--color-contrast-lower, 0, 0%, 95%);
+  @include defineColorHSL(--color-contrast-low, 240, 1%, 83%);
+  @include defineColorHSL(--color-contrast-medium, 240, 1%, 48%);
+  @include defineColorHSL(--color-contrast-high, 240, 4%, 20%);
+  @include defineColorHSL(--color-contrast-higher, 240, 8%, 12%);
+
+  // custom properties
+  @include defineColorHSL(--background-primary, 0, 0%, 100%);
+  @include defineColorHSL(--background-box-shadow-primary, 0, 0%, 80%);
+  --select-arrow-primary: url("data:image/svg+xml;utf8,<svg version='1.1' viewBox='0 0 2 1' xmlns='http://www.w3.org/2000/svg'><g fill='none' fill-rule='evenodd'><g fill='%23687384' fill-rule='nonzero'><path d='m2 0.14261c0 0.014891-0.00668 0.028064-0.02004 0.039519l-0.93387 0.80069c-0.01336 0.011455-0.028724 0.017182-0.046092 0.017182-0.017368 0-0.032732-0.0057274-0.046092-0.017182l-0.93387-0.80069c-0.01336-0.011455-0.02004-0.024628-0.02004-0.039519s0.00668-0.028064 0.02004-0.039519l0.1002-0.085911c0.01336-0.011455 0.028724-0.017182 0.046092-0.017182 0.017368 0 0.032732 0.0057274 0.046092 0.017182l0.78758 0.67526 0.78758-0.67526c0.01336-0.011455 0.028724-0.017182 0.046092-0.017182 0.017368 0 0.032732 0.0057274 0.046092 0.017182l0.1002 0.085911c0.01336 0.011455 0.02004 0.024628 0.02004 0.039519z'/></g></g></svg>");
+  --color-primary-picker-rgb: #f08400;
+}
+
+[data-theme="dark-theme"] {
+  // primary
+  @include defineColorHSL(--color-primary-darker, 191, 73%, 29%);
+  @include defineColorHSL(--color-primary-dark, 191, 73%, 39%);
+  @include defineColorHSL(--color-primary, 191, 73%, 49%);
+  @include defineColorHSL(--color-primary-light, 191, 73%, 59%);
+  @include defineColorHSL(--color-primary-lighter, 191, 73%, 69%);
+
+  // color contrasts
+  @include defineColorHSL(--color-bg, 240, 2%, 20%);
+  @include defineColorHSL(--color-contrast-lowest, 240, 2%, 17%);
+  @include defineColorHSL(--color-contrast-lower, 240, 2%, 24%);
+  @include defineColorHSL(--color-contrast-low, 240, 1%, 32%);
+  @include defineColorHSL(--color-contrast-medium, 240, 1%, 61%);
+  @include defineColorHSL(--color-contrast-high, 0, 0%, 90%);
+  @include defineColorHSL(--color-contrast-higher, 0, 0%, 100%);
+
+  // custom properties
+  @include defineColorHSL(--background-primary, 240, 8%, 12%);
+  @include defineColorHSL(--background-box-shadow-primary, 0, 0%, 0%);
+  --select-arrow-primary: url("data:image/svg+xml;utf8,<svg version='1.1' viewBox='0 0 2 1' xmlns='http://www.w3.org/2000/svg'><g fill='none' fill-rule='evenodd'><g fill='%23dde0e5' fill-rule='nonzero'><path d='m2 0.14261c0 0.014891-0.00668 0.028064-0.02004 0.039519l-0.93387 0.80069c-0.01336 0.011455-0.028724 0.017182-0.046092 0.017182-0.017368 0-0.032732-0.0057274-0.046092-0.017182l-0.93387-0.80069c-0.01336-0.011455-0.02004-0.024628-0.02004-0.039519s0.00668-0.028064 0.02004-0.039519l0.1002-0.085911c0.01336-0.011455 0.028724-0.017182 0.046092-0.017182 0.017368 0 0.032732 0.0057274 0.046092 0.017182l0.78758 0.67526 0.78758-0.67526c0.01336-0.011455 0.028724-0.017182 0.046092-0.017182 0.017368 0 0.032732 0.0057274 0.046092 0.017182l0.1002 0.085911c0.01336 0.011455 0.02004 0.024628 0.02004 0.039519z'/></g></g></svg>");
+  --color-primary-picker-rgb: #22b7d8;
+}
